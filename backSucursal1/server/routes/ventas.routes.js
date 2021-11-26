@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const ventasctrl = require('../controllers/controllerVentas');
+router.get('/listar', ventasctrl.listar);
+router.post('/guardar', ventasctrl.guardar);
+router.get('/listar/:id', ventasctrl.listarId);
+router.put('/actualizar/:id', ventasctrl.actualizar);
+router.delete('/eliminar/:id', ventasctrl.eliminar);
+router.get('/numeroVenta', ventasctrl.traerNumeroV);
+module.exports = router;
