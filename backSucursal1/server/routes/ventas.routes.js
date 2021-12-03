@@ -7,4 +7,5 @@ router.get('/listar/:id', ventasctrl.listarId);
 router.put('/actualizar/:id', ventasctrl.actualizar);
 router.delete('/eliminar/:id', ventasctrl.eliminar);
 router.get('/numeroVenta', ventasctrl.traerNumeroV);
+router.get('/buscarVentas/:cedula_cliente', ventasctrl.buscarVentas);
 module.exports = router;

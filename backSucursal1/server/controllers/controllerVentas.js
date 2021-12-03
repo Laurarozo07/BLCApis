@@ -1,7 +1,15 @@
 const Ventas = require('../Models/ventas.js');
 const ventasController = {};
 
-// trae el numero de documentos que existen en la base de datos 
+ventasController.buscarVentas = async(req, res) => {
+    const ventas = await Ventas.find({ cedula_cliente: req.params.cedula_cliente })
+    res.json(ventas)
+}
+
+/**
+ * devuelve el numero de documentos que existen en la base de datos  
+ */
+
 ventasController.traerNumeroV = async(req, res) => {
     const ventas = await Ventas.find({}).count()
     res.json(ventas);

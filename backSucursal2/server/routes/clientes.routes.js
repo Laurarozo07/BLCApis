@@ -4,6 +4,7 @@ const clientesctrl = require('../controllers/controllerClientes');
 router.get('/listar', clientesctrl.listar);
 router.post('/guardar', clientesctrl.guardar);
 router.get('/listar/:id', clientesctrl.listarId);
+router.get('/buscar/:cedula_clientes', clientesctrl.listarDoc);
 router.put('/actualizar/:id', clientesctrl.actualizar);
 router.delete('/eliminar/:id', clientesctrl.eliminar);
 module.exports = router;

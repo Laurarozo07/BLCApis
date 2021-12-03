@@ -11,6 +11,11 @@ clientesController.listarId = async(req, res) => {
     res.json(clientes);
 };
 
+clientesController.listarDoc = async(req, res) => {
+    const clientes = await Clientes.find({ cedula_clientes: req.params.cedula_clientes });
+    res.json(clientes)
+}
+
 clientesController.guardar = async(req, res) => {
     const clientes = new Clientes(req.body);
     await clientes.save();
