@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const mongo_uri = "mongodb://localhost/DB_Clientes";
+const mongo_uri = "mongodb+srv://admin:1234@bikerlinkcompany.swjxy.mongodb.net/DB_Clientes?retryWrites=true&w=majority";
 
 
 mongoose.connect(mongo_uri)

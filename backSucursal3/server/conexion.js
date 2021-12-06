@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const mongo_uri = "mongodb://localhost/DB_Productos";
+const mongo_uri = "mongodb+srv://admin:1234@bikerlinkcompany.swjxy.mongodb.net/DB_Productos?retryWrites=true&w=majority";
+
 
 
 mongoose.connect(mongo_uri)
